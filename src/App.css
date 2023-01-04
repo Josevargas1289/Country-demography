@@ -1,0 +1,46 @@
+#root {
+  font-size: 10px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+  border: 1px solid black;
+  width: 400px;
+  font-size: 15px;
+
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.title{
+  width: 100%;
+  text-align: center;
+ 
+}
+.img{
+  width: 54%;
+}
+b{
+  color: blue;
+  font-weight: bold;
+}
+
+.btn-change{
+  margin: 2rem;
+}
+.group-btn{
+  display: flex;
+ justify-content: center;
+ justify-items: center;
+ align-content: center;
+ align-items: center;
+ margin-top: 1rem;
+
+
+}
