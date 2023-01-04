@@ -4,13 +4,25 @@
   padding: 2rem;
   text-align: center;
 }
+.container-card{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+ 
+
+}
 
 .card {
+ 
   padding: 2em;
+  width: 50%;
   border: 1px solid black;
-  width: 400px;
   font-size: 15px;
-
+  border-radius: 1rem;
+ 
 }
 
 .read-the-docs {
@@ -30,9 +42,17 @@ b{
   color: blue;
   font-weight: bold;
 }
-
+button{
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 3px;
+}
 .btn-change{
   margin: 2rem;
+
+}
+.btn-pais{
+  margin: 8px;
 }
 .group-btn{
   display: flex;
@@ -41,6 +61,7 @@ b{
  align-content: center;
  align-items: center;
  margin-top: 1rem;
+ cursor: pointer;
 
 
 }

@@ -11,38 +11,41 @@ const Countrie = () => {
  
 
     const searchConutry = () => {
-        setTex(tex)
+       load()
       
     }
 
     useEffect(() => {
-
-        axios.get(`https://restcountries.com/v3.1/name/${tex}`)
-            .then(res => {
-                setCountrie(res.data[0])
-                setTimeout(() => setIsLoading(false), 1000);
-            });
+        load()
+    }, [])
 
 
-    }, [tex])
+    const load =()=>{
+        axios.get(`https://restcountries.com/v3.1/name/${tex || "colombia"}`)
+        .then(res => {
+            setCountrie(res.data[0])
+            setTimeout(() => setIsLoading(false), 1000);
+        });
+
+    }
 
     
-
-
     // console.log(countrie);
 
     const [infoShowed, setInfoShowed] = useState("Demography")
 
     return (
 
-
+        <div className="container-card">
+            
+        
         <div className="card">
 
             <div>
                 <input type="text" placeholder="Buscar pais"
                     value={tex}
                     onChange={(e) => setTex(e.target.value)}  />
-                    {/* <button onClick={searchConutry}>Buscar pais</button> */}
+                    <button className="btn-pais" onClick={searchConutry}>Buscar pais</button>
             </div>
 
             {
@@ -58,7 +61,7 @@ const Countrie = () => {
                         <div className="group-btn">
                             <button onClick={() => setInfoShowed("Demography")}>Demography</button>
                             <button onClick={() => setInfoShowed("Location")}>Location</button>
-                            <button onClick={() => setInfoShowed("Capital")}>Capital</button>
+                            <button  onClick={() => setInfoShowed("Capital")}>Capital</button >
                         </div>
 
                         {
@@ -68,6 +71,7 @@ const Countrie = () => {
                 )
             }
 
+        </div>
         </div>
     );
 };
