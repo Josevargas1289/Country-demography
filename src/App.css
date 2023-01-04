@@ -46,6 +46,7 @@ button{
   cursor: pointer;
   border-radius: 1rem;
   margin: 3px;
+  border: 1px solid black;
 }
 .btn-change{
   margin: 2rem;
